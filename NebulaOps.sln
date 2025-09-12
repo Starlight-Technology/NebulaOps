@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36429.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{0142249E-0168-4D14-9925-9D35AE784FFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebularOps.UI", "src\UI\NebularOps.UI\NebularOps.UI\NebularOps.UI.csproj", "{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebularOps.UI.Shared", "src\UI\NebularOps.UI\NebularOps.UI.Shared\NebularOps.UI.Shared.csproj", "{93F08220-C729-40DA-B8BE-9EBA43F783E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebularOps.UI.Web", "src\UI\NebularOps.UI\NebularOps.UI.Web\NebularOps.UI.Web.csproj", "{FBAC08AC-BE34-457A-9372-76B3127FD643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebularOps.UI.Web.Client", "src\UI\NebularOps.UI\NebularOps.UI.Web.Client\NebularOps.UI.Web.Client.csproj", "{622E117D-66EA-4A1F-9B2B-437F46D3244A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{380A7511-A354-6D7A-0CC0-8FA1F1BA7B6C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93F08220-C729-40DA-B8BE-9EBA43F783E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93F08220-C729-40DA-B8BE-9EBA43F783E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93F08220-C729-40DA-B8BE-9EBA43F783E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93F08220-C729-40DA-B8BE-9EBA43F783E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBAC08AC-BE34-457A-9372-76B3127FD643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBAC08AC-BE34-457A-9372-76B3127FD643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBAC08AC-BE34-457A-9372-76B3127FD643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBAC08AC-BE34-457A-9372-76B3127FD643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{622E117D-66EA-4A1F-9B2B-437F46D3244A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{622E117D-66EA-4A1F-9B2B-437F46D3244A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{622E117D-66EA-4A1F-9B2B-437F46D3244A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{622E117D-66EA-4A1F-9B2B-437F46D3244A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0142249E-0168-4D14-9925-9D35AE784FFA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{698C9ABA-C64A-4DB2-B765-90A2BB3C10DF} = {0142249E-0168-4D14-9925-9D35AE784FFA}
+		{93F08220-C729-40DA-B8BE-9EBA43F783E4} = {0142249E-0168-4D14-9925-9D35AE784FFA}
+		{FBAC08AC-BE34-457A-9372-76B3127FD643} = {0142249E-0168-4D14-9925-9D35AE784FFA}
+		{622E117D-66EA-4A1F-9B2B-437F46D3244A} = {0142249E-0168-4D14-9925-9D35AE784FFA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3290A0DE-CB5D-45C0-AD1D-6325804DE390}
+	EndGlobalSection
+EndGlobal

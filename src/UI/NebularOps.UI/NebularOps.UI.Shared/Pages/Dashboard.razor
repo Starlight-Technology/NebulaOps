@@ -1,0 +1,50 @@
+﻿@page "/dashboard"
+@using MudBlazor
+
+<MudPaper Class="pa-4">
+    <MudText Typo="Typo.h4" Class="mb-4">🚀 NebulaOps Dashboard</MudText>
+
+    <MudGrid GutterSize="3">
+        @foreach (var metric in Metrics)
+        {
+            <MudItem xs="12" sm="6" md="3">
+                <MudCard Style="background-color:aliceblue">
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem xs="3">
+                                <MudIcon Icon="@metric.Icon" Size="Size.Large" />
+                            </MudItem>
+                            <MudItem xs="9">
+                                <MudText Typo="Typo.subtitle1">@metric.Title</MudText>
+                                <MudText Typo="Typo.h6">@metric.Value @metric.Unit</MudText>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                </MudCard>
+            </MudItem>
+        }
+    </MudGrid>
+
+    <MudDivider Class="my-4" />
+
+    <MudText Typo="Typo.h6">Histórico de CPU</MudText>
+    <MudChart ChartType="ChartType.Line" Labels="@CpuLabels" Datasets="@CpuDatasets" Class="mb-4" />
+</MudPaper>
+
+@code {
+    record MetricCard(string Title, string Icon, string Value, string Unit, string Color);
+
+    List<MetricCard> Metrics = new()
+    {
+        new("CPU", Icons.Material.Filled.Memory, "72", "%", "#1976d2"),
+        new("Memória", Icons.Material.Filled.Storage, "65", "%", "#388e3c"),
+        new("Disco", Icons.Material.Filled.Dns, "48", "%", "#f57c00"),
+        new("Rede", Icons.Material.Filled.NetworkCheck, "12.4", "Mbps", "#d32f2f")
+    };
+
+    string[] CpuLabels = new[] { "10s", "20s", "30s", "40s", "50s", "60s" };
+    ChartSeries[] CpuDatasets = new[]
+    {
+        new ChartSeries { Name = "CPU %", Data = new double[] { 60, 65, 70, 75, 72, 74 } }
+    };
+}
