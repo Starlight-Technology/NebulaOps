@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NebulaOps.Agent": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

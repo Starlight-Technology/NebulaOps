@@ -1,4 +1,4 @@
-using NebularOps.UI.Web.Components;
+using NebulaOps.UI.Web.Components;
 using MudBlazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,7 +34,7 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(
-        typeof(NebularOps.UI.Shared._Imports).Assembly,
-        typeof(NebularOps.UI.Web.Client._Imports).Assembly);
+        typeof(NebulaOps.UI.Shared._Imports).Assembly,
+        typeof(NebulaOps.UI.Web.Client._Imports).Assembly);
 
 app.Run();

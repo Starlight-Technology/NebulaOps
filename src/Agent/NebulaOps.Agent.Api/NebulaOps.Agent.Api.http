@@ -1,0 +1,6 @@
+@NebulaOps.Agent.Api_HostAddress = http://localhost:5106
+
+GET {{NebulaOps.Agent.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

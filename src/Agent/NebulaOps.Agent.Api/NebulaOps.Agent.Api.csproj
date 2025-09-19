@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NebulaOps.Mapper\NebulaOps.Mapper.csproj" />
+    <ProjectReference Include="..\..\..\NebulaOps.Models\NebulaOps.Models.csproj" />
+    <ProjectReference Include="..\..\..\NebulaOps.Service.Agent.Api\NebulaOps.Service.Agent.Api.csproj" />
+    <ProjectReference Include="..\..\Context\NebulaOps.Context.Agent\NebulaOps.Context.Agent.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NebularOps.UI.Web.Client\NebularOps.UI.Web.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NebularOps.UI.Shared\NebulaOps.UI.Shared.csproj" />
+    <ProjectReference Include="..\NebularOps.UI.Web.Client\NebulaOps.UI.Web.Client.csproj" />
   </ItemGroup>
 
 </Project>

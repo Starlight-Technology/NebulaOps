@@ -1,7 +1,8 @@
 ﻿using ObjCRuntime;
+
 using UIKit;
 
-namespace NebularOps.UI
+namespace NebulaOps.UI.Platforms.MacCatalyst
 {
     public class Program
     {

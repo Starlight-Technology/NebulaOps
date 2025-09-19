@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace NebularOps.UI
+namespace NebulaOps.UI.Platforms.MacCatalyst
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

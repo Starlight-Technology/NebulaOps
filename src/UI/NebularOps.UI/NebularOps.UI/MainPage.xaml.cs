@@ -1,4 +1,4 @@
-﻿namespace NebularOps.UI
+﻿namespace NebulaOps.UI
 {
     public partial class MainPage : ContentPage
     {

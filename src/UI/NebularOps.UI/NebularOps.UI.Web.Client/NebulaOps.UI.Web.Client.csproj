@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NebularOps.UI.Shared\NebularOps.UI.Shared.csproj" />
+    <ProjectReference Include="..\NebularOps.UI.Shared\NebulaOps.UI.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,8 @@
 ﻿using ObjCRuntime;
+
 using UIKit;
 
-namespace NebularOps.UI
+namespace NebulaOps.UI.Platforms.iOS
 {
     public class Program
     {

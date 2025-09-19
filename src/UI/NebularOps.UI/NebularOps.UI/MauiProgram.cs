@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using MudBlazor.Services;
 
-namespace NebularOps.UI
+namespace NebulaOps.UI
 {
     public static class MauiProgram
     {
