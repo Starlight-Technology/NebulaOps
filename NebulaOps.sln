@@ -42,6 +42,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Service.Agent.Api
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Mapper", "NebulaOps.Mapper\NebulaOps.Mapper.csproj", "{D6FB500F-E9CA-4DD7-A10E-ED706D44F064}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Utils", "src\Common\NebulaOps.Utils\NebulaOps.Utils.csproj", "{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{D6FB500F-E9CA-4DD7-A10E-ED706D44F064}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6FB500F-E9CA-4DD7-A10E-ED706D44F064}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6FB500F-E9CA-4DD7-A10E-ED706D44F064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +120,7 @@ Global
 		{EE271105-DDE6-40CD-848A-66C22828FEF7} = {56CBA735-77E8-4039-9760-E494935E214B}
 		{F1E9A387-AC19-448B-94BA-568A02569E7B} = {56CBA735-77E8-4039-9760-E494935E214B}
 		{D6FB500F-E9CA-4DD7-A10E-ED706D44F064} = {FF601180-C588-46E4-A62D-C6C48D7CC04E}
+		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20} = {FF601180-C588-46E4-A62D-C6C48D7CC04E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3290A0DE-CB5D-45C0-AD1D-6325804DE390}
