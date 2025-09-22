@@ -33,11 +33,11 @@ public class Manager(IMetricsRepository metricsRepository, IMapper mapper)
 
     }
 
-    public async Task<DefaultResponse> GetHostMetricsAsync()
+    public async Task<DefaultResponse> GetHostMetricsAsync(DateTime? start = null, DateTime? end = null)
     {
         try
         {
-            var entities = await metricsRepository.GetAll();
+            var entities = await metricsRepository.GetAll(start, end);
             var obj = mapper.Map<ICollection<Models.Metrics.HostMetrics>>(entities);
             return new DefaultResponse(objectResponse: obj);
         }

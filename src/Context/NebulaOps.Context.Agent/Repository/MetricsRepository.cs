@@ -25,8 +25,20 @@ public class MetricsRepository : IMetricsRepository
         return await _collection.Find(filter).Sort(sort).Limit(limit).ToListAsync();
     }
 
-    public async Task<List<HostMetrics>> GetAll()
+    public async Task<List<HostMetrics>> GetAll(DateTime? start = null, DateTime? end = null)
     {
-        return await _collection.Find(_ => true).ToListAsync();
+        // Define valores padrão se necessário
+        start ??= DateTime.UtcNow.AddDays(-7);
+        end ??= DateTime.UtcNow;
+
+        // Cria filtro por intervalo de tempo
+        var filter = Builders<HostMetrics>.Filter.And(
+            Builders<HostMetrics>.Filter.Gte(m => m.Timestamp, start),
+            Builders<HostMetrics>.Filter.Lte(m => m.Timestamp, end)
+        );
+
+        var sort = Builders<HostMetrics>.Sort.Ascending(m => m.Timestamp);
+
+        return await _collection.Find(filter).Sort(sort).ToListAsync();
     }
 }

@@ -49,9 +49,9 @@ app.MapPost("/", async (IManager manager , [FromBody] NebulaOps.Models.Metrics.H
 })
 .WithName("PostMetrics");
 
-app.MapGet("/", async (IManager manager) => 
+app.MapGet("/", async (IManager manager, DateTime? start = null, DateTime? end = null) => 
 {
-    return await manager.GetHostMetricsAsync();
+    return await manager.GetHostMetricsAsync(start, end);
 })
 .WithName("GetMetrics");
 
