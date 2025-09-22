@@ -25,4 +25,7 @@ public class HostMetrics
 
     [BsonElement("network")]
     public List<NetworkInterfaceMetrics> Network { get; set; }
+
+    [BsonElement("containers")]
+    public List<ContainerMetrics>? Containers { get; set; }
 }

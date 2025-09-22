@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NebulaOps.Models\NebulaOps.Models.csproj" />
+    <ProjectReference Include="..\src\Common\NebulaOps.Utils\NebulaOps.Utils.csproj" />
     <ProjectReference Include="..\src\Context\NebulaOps.Context.Agent\NebulaOps.Context.Agent.csproj" />
   </ItemGroup>
 

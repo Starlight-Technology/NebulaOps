@@ -18,6 +18,7 @@ public class LinuxMetricsCollector : IMetricsCollector
         var mem = GetMemoryUsage();
         var disk = GetAllDiskMetrics();
         var net = GetAllNetworkMetrics();
+        var containers = GetDockerContainerMetrics();
 
         return new HostMetrics
         {
@@ -26,7 +27,8 @@ public class LinuxMetricsCollector : IMetricsCollector
             Cpu = cpu,
             Memory = mem,
             Disk = disk,
-            Network = net
+            Network = net,
+            Containers = containers
         };
     }
 
@@ -129,4 +131,46 @@ public class LinuxMetricsCollector : IMetricsCollector
         using var process = Process.Start(psi);
         return process?.StandardOutput.ReadToEnd() ?? "";
     }
+
+    private List<ContainerMetrics> GetDockerContainerMetrics()
+    {
+        var result = new List<ContainerMetrics>();
+        var output = RunCommand("docker stats --no-stream --format \"{{.Container}}|{{.Name}}|{{.CPUPerc}}|{{.MemUsage}}|{{.NetIO}}|{{.BlockIO}}\"");
+
+        foreach (var line in output.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+        {
+            var parts = line.Split('|');
+            if (parts.Length != 6) continue;
+
+            var memParts = parts[3].Split('/');
+            var netParts = parts[4].Split('/');
+            var blockParts = parts[5].Split('/');
+
+            result.Add(new ContainerMetrics
+            {
+                Id = parts[0],
+                Name = parts[1],
+                CpuPercent = double.Parse(parts[2].Trim('%')),
+                MemoryUsageMB = ParseSize(memParts[0]),
+                MemoryLimitMB = ParseSize(memParts[1]),
+                NetInputMB = ParseSize(netParts[0]),
+                NetOutputMB = ParseSize(netParts[1]),
+                BlockInputMB = ParseSize(blockParts[0]),
+                BlockOutputMB = ParseSize(blockParts[1])
+            });
+        }
+
+        return result;
+    }
+
+    private double ParseSize(string raw)
+    {
+        raw = raw.Trim().ToUpperInvariant();
+        if (raw.EndsWith("KB")) return double.Parse(raw[..^2]) / 1024;
+        if (raw.EndsWith("MB")) return double.Parse(raw[..^2]);
+        if (raw.EndsWith("GB")) return double.Parse(raw[..^2]) * 1024;
+        if (raw.EndsWith("B")) return double.Parse(raw[..^1]) / (1024 * 1024);
+        return 0;
+    }
+
 }

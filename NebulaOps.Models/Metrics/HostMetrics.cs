@@ -13,4 +13,5 @@ public class HostMetrics
     public double Memory { get; set; }
     public List<DiskMetrics>? Disk { get; set; }
     public List<NetworkInterfaceMetrics>? Network { get; set; }
+    public List<ContainerMetrics>? Containers { get; set; }
 }
