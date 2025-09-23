@@ -44,6 +44,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Mapper", "NebulaO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Utils", "src\Common\NebulaOps.Utils\NebulaOps.Utils.csproj", "{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NebulaOps.Context.UI", "src\Context\NebulaOps.Context.UI\NebulaOps.Context.UI.csproj", "{11E5A585-A04B-49ED-8589-53544DFE1BE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11E5A585-A04B-49ED-8589-53544DFE1BE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11E5A585-A04B-49ED-8589-53544DFE1BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11E5A585-A04B-49ED-8589-53544DFE1BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11E5A585-A04B-49ED-8589-53544DFE1BE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +127,7 @@ Global
 		{F1E9A387-AC19-448B-94BA-568A02569E7B} = {56CBA735-77E8-4039-9760-E494935E214B}
 		{D6FB500F-E9CA-4DD7-A10E-ED706D44F064} = {FF601180-C588-46E4-A62D-C6C48D7CC04E}
 		{F07DE1CD-33D7-4726-9073-DB2F2CE0AB20} = {FF601180-C588-46E4-A62D-C6C48D7CC04E}
+		{11E5A585-A04B-49ED-8589-53544DFE1BE6} = {14233166-488A-4C3E-8894-EBD0492934D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3290A0DE-CB5D-45C0-AD1D-6325804DE390}
